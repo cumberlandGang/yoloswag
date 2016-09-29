@@ -1,0 +1,14 @@
+﻿@using System.Collections.Generic
+
+@model IEnumerable<string>
+	
+@{
+	this.Layout = "../Shared/_Layout.cshtml";
+}
+
+<h1 class="center">Yolo, Swag.</h1>
+@foreach(string s in Model) 
+{
+	<div class="chatMessage" >@s</div>
+	<br>
+}
