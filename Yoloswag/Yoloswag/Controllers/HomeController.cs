@@ -23,17 +23,20 @@ namespace Yoloswag.Controllers
 			c.AddBot();
 			c.AddBot();
 
-			return View(c.GenerateConversation(10));
+			return View(c.GenerateConversation(2));
 		}
 
-		public ActionResult Generate(int bots, int length)
+		public ActionResult Generate()
 		{
+			var bots = int.Parse(Request.Params["bots"]);
+			var length = int.Parse(Request.Params["length"]);
+
 			Conversation c = new Conversation();
 
 			for (int i = 0; i < length; i++)
 				c.AddBot();
 
-			return View(c.GenerateConversation(length));
+			return View("/Views/Home/Index.cshtml", c.GenerateConversation(length));
 		}
 	}
 }

@@ -6,6 +6,13 @@
 	this.Layout = "../Shared/_Layout.cshtml";
 }
 
+<form method="post" action="/Home/Generate">
+	<input type="text" name="bots" id="bots" placeholder="bots">
+	<input type="text" name="length" id="length" placeholder="length">
+	<input type="submit">
+</form>
+
+<hr>
 <h1 class="center">Yolo, Swag.</h1>
 @foreach(string s in Model) 
 {
