@@ -1,17 +1,20 @@
-﻿<Properties StartupConfiguration="{1008D7A1-58F0-4885-8BB3-97DE1AA00EA9}|">
-  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" />
+﻿<Properties StartupConfiguration="{1008D7A1-58F0-4885-8BB3-97DE1AA00EA9}|" StartupItem="Yoloswag/Yoloswag.csproj">
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="monodevelop" />
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <MonoDevelop.Ide.DebuggingService.Breakpoints>
     <BreakpointStore />
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
-  <MonoDevelop.Ide.Workbench ActiveDocument="Yoloswag\Views\Home\Index.cshtml">
+  <MonoDevelop.Ide.Workbench ActiveDocument="Yoloswag/Models/Participant.cs">
     <Files>
-      <File FileName="Yoloswag\Controllers\HomeController.cs" Line="26" Column="42" />
-      <File FileName="Yoloswag\Views\Home\Index.cshtml" Line="9" Column="30" />
-      <File FileName="Yoloswag\Views\Shared\_Layout.cshtml" Line="5" Column="52" />
-      <File FileName="Yoloswag\Content\Custom.css" Line="2" Column="21" />
-      <File FileName="Yoloswag\Models\Conversation.cs" Line="21" Column="45" />
+      <File FileName="Yoloswag/Controllers/HomeController.cs" Line="1" Column="1" />
+      <File FileName="Yoloswag/Models/Conversation.cs" Line="1" Column="1" />
+      <File FileName="Yoloswag/Models/Participant.cs" Line="12" Column="33" />
+      <File FileName="Yoloswag/Models/Message.cs" Line="1" Column="1" />
+      <File FileName="Yoloswag/Views/Home/Index.cshtml" Line="1" Column="1" />
     </Files>
   </MonoDevelop.Ide.Workbench>
+  <DisabledProjects>
+    <String>chatter-bot-api/dotnet/ChatterBotAPI/ChatterBotAPI.csproj</String>
+  </DisabledProjects>
   <MonoDevelop.Ide.ItemProperties.Yoloswag PreferredExecutionTarget="FirefoxHTML" />
 </Properties>

@@ -72,6 +72,8 @@
     </Compile>
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Models\Conversation.cs" />
+    <Compile Include="Models\Participant.cs" />
+    <Compile Include="Models\Message.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Web.config" />
@@ -84,12 +86,6 @@
     <Content Include="packages.config" />
     <Content Include="Content\Custom.css" />
   </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\chatter-bot-api\dotnet\ChatterBotAPI\ChatterBotAPI.csproj">
-      <Project>{2E624962-F155-432C-A90A-E1CE75DEE9EA}</Project>
-      <Name>ChatterBotAPI</Name>
-    </ProjectReference>
-  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
     <MonoDevelop>
@@ -98,4 +94,14 @@
       </Properties>
     </MonoDevelop>
   </ProjectExtensions>
+  <ItemGroup>
+    <ProjectReference Include="..\packages\chatterbot-dotnet\ChatterBotAPI\ChatterBotAPI.csproj">
+      <Project>{2E624962-F155-432C-A90A-E1CE75DEE9EA}</Project>
+      <Name>ChatterBotAPI</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\packages\HumDrum\HumDrum.csproj">
+      <Project>{715D15D4-68CB-4E55-B9C6-DCFE791C9B00}</Project>
+      <Name>HumDrum</Name>
+    </ProjectReference>
+  </ItemGroup>
 </Project>

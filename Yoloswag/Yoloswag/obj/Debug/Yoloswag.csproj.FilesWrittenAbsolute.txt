@@ -1,0 +1,16 @@
+/home/nate/Code/yoloswag/Yoloswag/Yoloswag/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/nate/Code/yoloswag/Yoloswag/Yoloswag/obj/Debug/Yoloswag.dll
+/home/nate/Code/yoloswag/Yoloswag/Yoloswag/bin/System.Web.Razor.dll
+/home/nate/Code/yoloswag/Yoloswag/Yoloswag/bin/Microsoft.Web.Infrastructure.dll
+/home/nate/Code/yoloswag/Yoloswag/Yoloswag/bin/System.Web.Helpers.dll
+/home/nate/Code/yoloswag/Yoloswag/Yoloswag/bin/System.Web.WebPages.Deployment.dll
+/home/nate/Code/yoloswag/Yoloswag/Yoloswag/bin/System.Web.WebPages.dll
+/home/nate/Code/yoloswag/Yoloswag/Yoloswag/bin/System.Web.WebPages.Razor.dll
+/home/nate/Code/yoloswag/Yoloswag/Yoloswag/bin/System.Web.Mvc.dll
+/home/nate/Code/yoloswag/Yoloswag/Yoloswag/bin/ChatterBotAPI.dll
+/home/nate/Code/yoloswag/Yoloswag/Yoloswag/bin/ChatterBotAPI.dll.mdb
+/home/nate/Code/yoloswag/Yoloswag/Yoloswag/bin/HumDrum.dll
+/home/nate/Code/yoloswag/Yoloswag/Yoloswag/bin/HumDrum.dll.mdb
+/home/nate/Code/yoloswag/Yoloswag/Yoloswag/bin/Yoloswag.dll.mdb
+/home/nate/Code/yoloswag/Yoloswag/Yoloswag/bin/Yoloswag.dll
+/home/nate/Code/yoloswag/Yoloswag/Yoloswag/obj/Debug/Yoloswag.dll.mdb

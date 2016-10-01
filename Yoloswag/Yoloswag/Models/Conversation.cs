@@ -3,6 +3,8 @@ using System.Collections.Generic;
 
 using ChatterBotAPI;
 
+using HumDrum.Collections;
+
 namespace Yoloswag
 {
 	public class Conversation
@@ -12,13 +14,17 @@ namespace Yoloswag
 		/// that happens within the conversation.
 		/// </summary>
 		/// <value>The participants</value>
-		public List<ChatterBotSession> Participants {get; set;}
+		public List<Participant> Participants {get; set;}
 
+		/// <summary>
+		/// Factory used for generating new Chatbots.
+		/// </summary>
+		/// <value>The factory.</value>
 		private ChatterBotFactory Factory { get; set;}
 
 		public Conversation()
 		{
-			Participants = new List<ChatterBotSession>();
+			Participants = new List<Participant>();
 			Factory = new ChatterBotFactory();
 		}
 
@@ -29,8 +35,9 @@ namespace Yoloswag
 		{
 			ChatterBot newBot = Factory.Create(ChatterBotType.CLEVERBOT);
 			ChatterBotSession botSession = newBot.CreateSession();
+			string botName = "bot" + Participants.Count.ToString ();
 
-			Participants.Add(botSession);
+			Participants.Add(new Participant(botName, botSession));
 		}
 
 		/// <summary>
@@ -38,7 +45,7 @@ namespace Yoloswag
 		/// </summary>
 		/// <returns>The conversation</returns>
 		/// <param name="length">The length, in lines, of the conversation</param></param>
-		public IEnumerable<string> GenerateConversation(int length)
+		public IEnumerable<Message> GenerateConversation(int length)
 		{
 			return GenerateConversation(length, "Hello");
 		}
@@ -49,17 +56,18 @@ namespace Yoloswag
 		/// <returns>The conversation</returns>
 		/// <param name="length">The length of the conversation, in lines.</param>
 		/// <param name="seed">What to originally tell the first bot.</param>
-		public IEnumerable<string> GenerateConversation(int length, string seed)
+		public IEnumerable<Message> GenerateConversation(int length, string seed)
 		{
-			List<string> log = new List<string>();
+			List<Message> log = new List<Message>();
 
-			string last = Participants.ToArray()[0].Think(seed);
+			Message last = Participants.First (x => true).Think (seed);
+
 			for (int i = 0; i < length; i++)
 			{
-				foreach (ChatterBotSession session in Participants)
+				foreach (Participant participant in Participants)
 				{
 					log.Add(last);
-					last = session.Think(last);
+					last = participant.Think (last.Content);
 				}
 			}
 

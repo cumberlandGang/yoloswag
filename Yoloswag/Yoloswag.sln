@@ -1,9 +1,11 @@
-
+﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Yoloswag", "Yoloswag\Yoloswag.csproj", "{1008D7A1-58F0-4885-8BB3-97DE1AA00EA9}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatterBotAPI", "chatter-bot-api\dotnet\ChatterBotAPI\ChatterBotAPI.csproj", "{2E624962-F155-432C-A90A-E1CE75DEE9EA}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ChatterBotAPI", "packages\chatterbot-dotnet\ChatterBotAPI\ChatterBotAPI.csproj", "{2E624962-F155-432C-A90A-E1CE75DEE9EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HumDrum", "packages\HumDrum\HumDrum.csproj", "{715D15D4-68CB-4E55-B9C6-DCFE791C9B00}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -19,5 +21,9 @@ Global
 		{2E624962-F155-432C-A90A-E1CE75DEE9EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{2E624962-F155-432C-A90A-E1CE75DEE9EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{2E624962-F155-432C-A90A-E1CE75DEE9EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{715D15D4-68CB-4E55-B9C6-DCFE791C9B00}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{715D15D4-68CB-4E55-B9C6-DCFE791C9B00}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{715D15D4-68CB-4E55-B9C6-DCFE791C9B00}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{715D15D4-68CB-4E55-B9C6-DCFE791C9B00}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 EndGlobal

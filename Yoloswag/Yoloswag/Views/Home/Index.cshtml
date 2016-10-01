@@ -1,6 +1,7 @@
 ﻿@using System.Collections.Generic
+@using Yoloswag
 
-@model IEnumerable<string>
+@model IEnumerable<Message>
 	
 @{
 	this.Layout = "../Shared/_Layout.cshtml";
@@ -14,8 +15,15 @@
 
 <hr>
 <h1 class="center">Yolo, Swag.</h1>
-@foreach(string s in Model) 
+@foreach(Message m in Model) 
 {
-	<div class="chatMessage" >@s</div>
+	<div class="chatMessage" >
+		<div class="chatAuthor">
+			@m.Author.Name
+		</div>
+		<div class="chatBody">
+			@m.Content
+		</div>
+	</div>
 	<br>
 }

@@ -1,0 +1,5 @@
+/home/nate/Code/yoloswag/Yoloswag/packages/chatterbot-dotnet/ChatterBotAPI/obj/Debug/.NETFramework,Version=v4.5.AssemblyAttribute.cs
+/home/nate/Code/yoloswag/Yoloswag/packages/chatterbot-dotnet/ChatterBotAPI/bin/Debug/ChatterBotAPI.dll.mdb
+/home/nate/Code/yoloswag/Yoloswag/packages/chatterbot-dotnet/ChatterBotAPI/bin/Debug/ChatterBotAPI.dll
+/home/nate/Code/yoloswag/Yoloswag/packages/chatterbot-dotnet/ChatterBotAPI/obj/Debug/ChatterBotAPI.dll
+/home/nate/Code/yoloswag/Yoloswag/packages/chatterbot-dotnet/ChatterBotAPI/obj/Debug/ChatterBotAPI.dll.mdb
