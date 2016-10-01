@@ -33,7 +33,7 @@ namespace Yoloswag.Controllers
 
 			Conversation c = new Conversation();
 
-			for (int i = 0; i < length; i++)
+			for (int i = 0; i < bots; i++)
 				c.AddBot();
 
 			return View("/Views/Home/Index.cshtml", c.GenerateConversation(length));
