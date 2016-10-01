@@ -5,7 +5,30 @@
 	
 @{
 	this.Layout = "../Shared/_Layout.cshtml";
+	int i = 0;
 }
+
+<!-- This page has a lot of comments just describing shit. You can feel free to delete the comments so it's easier to work with -->
+
+<!-- This is a CSHTML file. We're using CSHTML because it's FAR easier to
+do harder things, like interface with chat bots and use Object Orientation.
+
+CSHTML lets you use C# inside of the HTML file to change what is showed to the user
+when they load the webpage. -->
+
+<!-- This is a form tag. It usually contains things the user can interact with, like
+buttons, text boxes, checkboxes, whatevs. Form, when used with inputs with a proper "name"
+attribute, send the information to the web server that we have running for this project.
+
+HTTP web servers can listen to two kinds of requests in order to perform actions. They can
+either understand GET or POST methods. GET transmits information like you would see in Java, using
+the URL to literally tell the server what the variables are equal to. A proper GET of the below example would
+load a URL on the web server that said "server.com/Home/Generate?bots=3&length=5".
+
+POST is a bit trickier. It puts the variables inside of a Hashmap, essentially, and sends them to the server.
+This is recommended for sensitive data, since your username and password wouldn't be in the URL, for instance, or
+for gigantic data. In this case our data is small but it's still using post because ¯\(°_o)/¯.
+-->
 
 <form method="post" action="/Home/Generate">
 	<input type="text" name="bots" id="bots" placeholder="bots">
@@ -13,11 +36,49 @@
 	<input type="submit">
 </form>
 
+<!-- In ASP.NET, the web Framework we're using, submitting that form will cause the web server (xsp4 or Apache) to load a "controller"
+that handles the given request. In this case, the Controller itself is a C# file located in Yoloswag/Controllers/HomeController, and the 
+"Generate" function in there is what it's using. The functions can do a couple of things. They can either use "return" like normal functions do,
+which you would want if you were using Javascript to load information from the website WITHOUT reloading the entire page (this is what sites like
+GMAIL do. That process is called AJAX). Or, like we do here, it can return a "View", which is a webpage that you can provide parameters to.
+
+The parameters you supply to the webpages are standard C# Objects, which is what makes ASP.NET so wicked to use. You wind up being able to embed
+code directly into the website with the @@ symbol, which is dope -->
+
+<!-- The Model, which is the object this page gets, the View, which is the page itself, and the Controller, which controls the server state
+and what kind of model the site gets comprise ASP.NET MVC (Model-View-Controller) 4. MVC is a super common design pattern in a bunch of different
+software, but especially in Website Design. Java, Python, C#, PHP, etc. all have MVC-oriented design patterns in their web framework of choice -->
+
 <hr>
-<h1 class="center">Yolo, Swag.</h1>
+
+<!-- This webpage is set to listen to a couple of things. A Javascript file located in /Scripts/Custom.js and a
+CSS file in /Content/Custom.css are what should be edited to change the style and functionality of the website.
+
+Two popular libraries, JQuery and Bootstrap, are also included. They wind up making web development a fuck ton easier for
+complicated reasons. -->
+
+<!-- The styles you'll want to edit are the following:
+
+.title: The centered title of the website
+.conversationBody: Where all of the messages between bots are shown
+.chatMessage: A message from a bot, including both the author and the text.
+.chatAuthor: Just the author of a chatMessage
+.chatBody: Just the text of a message
+-->
+
+<!-- If you decide to add any Javascript, bear in mind:
+
+Every chatMessage has a unique name. The first message is in a <div> tag with the id "chatMessage0", the next
+one would be "chatMessage1", and so forth.
+
+This could let you do something like programmatically show each message on a delay, to mimic a real conversation -->
+
+<h1 class="center title">Yolo, Swag.</h1>
+<div class="conversationBody">
+
 @foreach(Message m in Model) 
 {
-	<div class="chatMessage" >
+	<div class="chatMessage" id="chatMessage@(i)">
 		<div class="chatAuthor">
 			@m.Author.Name
 		</div>
@@ -26,4 +87,7 @@
 		</div>
 	</div>
 	<br>
+
+	i = i + 1;
 }
+</div>

@@ -74,6 +74,7 @@
     <Compile Include="Models\Conversation.cs" />
     <Compile Include="Models\Participant.cs" />
     <Compile Include="Models\Message.cs" />
+    <Compile Include="Models\Incrementor.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Web.config" />
@@ -85,6 +86,7 @@
     <Content Include="Global.asax" />
     <Content Include="packages.config" />
     <Content Include="Content\Custom.css" />
+    <Content Include="Scripts\Custom.js" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <ProjectExtensions>
