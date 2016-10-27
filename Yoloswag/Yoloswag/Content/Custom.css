@@ -1,3 +1,42 @@
 ﻿.center {
 	text-align: center;
 }
+
+.conversationBody {
+  background-color: white;	
+	margin: 0% 30%;
+	opacity: .7;
+}
+
+.chatMessage {
+  text-align: center;
+	background-color: lightgray;
+	opacity: 6;
+}
+
+.chatAuthor {
+	background-color: cyan;
+	font-weight: bold;
+}
+
+form {
+	background-color: lightgray;
+}
+
+input[type="text"] {
+  padding: 0px;
+}
+
+input[type="submit"] {
+	width: 15%;
+}
+
+body {
+	background:
+	linear-gradient(
+      rgba(0, 0, 0, 0.4), 
+      rgba(0, 0, 0, 0.4)
+    ),
+	url("http://files.vividscreen.info/soft/a12c224c23fa232cf2aafde43166cf0e/Noisy-Background-1920x1408.jpg");
+	
+}
